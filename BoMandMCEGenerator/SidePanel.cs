@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BoMandMCEGenerator
 {
-    public partial class Form1 : Form
+    public partial class SidePanel : UserControl
     {
-        public Form1()
+        public SidePanel()
         {
             InitializeComponent();
         }
