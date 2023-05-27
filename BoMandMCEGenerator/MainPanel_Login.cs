@@ -9,12 +9,11 @@ using System.Windows.Forms;
 
 namespace BoMandMCEGenerator
 {
-    public partial class LandingForm : Form
+    public partial class MainPanel_Login : UserControl
     {
-        public LandingForm()
+        public MainPanel_Login()
         {
             InitializeComponent();
         }
-
     }
 }

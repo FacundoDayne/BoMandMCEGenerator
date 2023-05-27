@@ -88,7 +88,6 @@
             this.sidePanel1.Name = "sidePanel1";
             this.sidePanel1.Size = new System.Drawing.Size(297, 603);
             this.sidePanel1.TabIndex = 1;
-            this.sidePanel1.Load += new System.EventHandler(this.sidePanel1_Load);
             // 
             // LandingForm
             // 
