@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.mainPanel_GenerateBOM1 = new BoMandMCEGenerator.MainPanel_GenerateBOM();
             this.sidePanel1 = new BoMandMCEGenerator.SidePanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button2.Location = new System.Drawing.Point(849, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 50);
@@ -58,12 +60,24 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button1.Location = new System.Drawing.Point(708, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 50);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // mainPanel_GenerateBOM1
+            // 
+            this.mainPanel_GenerateBOM1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel_GenerateBOM1.BackColor = System.Drawing.Color.White;
+            this.mainPanel_GenerateBOM1.Location = new System.Drawing.Point(296, 79);
+            this.mainPanel_GenerateBOM1.Name = "mainPanel_GenerateBOM1";
+            this.mainPanel_GenerateBOM1.Size = new System.Drawing.Size(698, 524);
+            this.mainPanel_GenerateBOM1.TabIndex = 2;
             // 
             // sidePanel1
             // 
@@ -82,8 +96,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(994, 603);
+            this.Controls.Add(this.mainPanel_GenerateBOM1);
             this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(1010, 642);
             this.Name = "LandingForm";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -97,6 +113,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private SidePanel sidePanel1;
+        private MainPanel_GenerateBOM mainPanel_GenerateBOM1;
     }
 }
 

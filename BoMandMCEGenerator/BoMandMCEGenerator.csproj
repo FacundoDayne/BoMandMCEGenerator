@@ -49,6 +49,12 @@
     <Compile Include="LandingForm.Designer.cs">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainPanel_GenerateBOM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPanel_GenerateBOM.Designer.cs">
+      <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SidePanel.cs">
@@ -59,6 +65,9 @@
     </Compile>
     <EmbeddedResource Include="LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel_GenerateBOM.resx">
+      <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
