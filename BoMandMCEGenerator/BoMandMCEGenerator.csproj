@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom Usercontrols\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,12 +66,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\MyRectangle.cs" />
+    <Compile Include="Custom Usercontrols\RoundedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\RoundedTextBox OBSOLETE.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\Trans.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
@@ -90,6 +111,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DropDownIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,5 +16,8 @@ namespace BoMandMCEGenerator
             InitializeComponent();
         }
 
+        private void LandingForm_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
