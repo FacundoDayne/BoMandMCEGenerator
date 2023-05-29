@@ -39,7 +39,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.login1.Location = new System.Drawing.Point(2, 0);
+            this.login1.Location = new System.Drawing.Point(-10, 214);
             this.login1.Name = "login1";
             this.login1.Size = new System.Drawing.Size(992, 603);
             this.login1.TabIndex = 4;
@@ -59,7 +59,6 @@
             this.mainPanel_GenerateBOM1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel_GenerateBOM1.AutoSize = true;
             this.mainPanel_GenerateBOM1.BackColor = System.Drawing.Color.White;
             this.mainPanel_GenerateBOM1.Location = new System.Drawing.Point(2, 0);
             this.mainPanel_GenerateBOM1.Name = "mainPanel_GenerateBOM1";
@@ -79,7 +78,6 @@
             this.Name = "LandingForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

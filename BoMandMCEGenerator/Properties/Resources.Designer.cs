@@ -63,6 +63,16 @@ namespace BoMandMCEGenerator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bronya {
+            get {
+                object obj = ResourceManager.GetObject("bronya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DropDownIcon {
             get {
                 object obj = ResourceManager.GetObject("DropDownIcon", resourceCulture);
