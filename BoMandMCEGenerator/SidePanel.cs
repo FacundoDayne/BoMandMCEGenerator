@@ -22,6 +22,8 @@ namespace BoMandMCEGenerator
             sidePanel.Click += hideDropDown;
             btnLogout.Click += logOut;
             btnLogout.Click += hideDropDown;
+            btnGenerateBOM.Click += requestChange;
+            btnGenerateMCE.Click += requestChange;
 
         }
 
@@ -38,9 +40,22 @@ namespace BoMandMCEGenerator
         private void logOut(object sender, EventArgs e)
         {
             LandingForm.landingForm.isLoggedIn = false;
-            LandingForm.landingForm.login1.Show();
+            LandingForm.landingForm.showLogin();
         }
 
+        private void requestChange (object sender, EventArgs e)
+        {
+            Button check = (Button)sender;
+            switch (check.Name.ToString())
+            {
+                case "btnGenerateBOM":
+                    LandingForm.landingForm.maskChange(new MainPanel_GenerateBOM());
+                    break;
+                case "btnGenerateMCE":
+                    LandingForm.landingForm.maskChange(new MainPanel_GenerateMCE());
+                    break;
+            }
+        }
 
     }
 }

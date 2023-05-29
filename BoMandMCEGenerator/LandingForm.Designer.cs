@@ -1,4 +1,6 @@
-﻿namespace BoMandMCEGenerator
+﻿using System.Windows.Forms;
+
+namespace BoMandMCEGenerator
 {
     partial class LandingForm
     {
@@ -30,7 +32,7 @@
         {
             this.login1 = new BoMandMCEGenerator.Login();
             this.sidePanel1 = new BoMandMCEGenerator.SidePanel();
-            this.mainPanel_GenerateBOM1 = new BoMandMCEGenerator.MainPanel_GenerateBOM();
+            this._current = new BoMandMCEGenerator.MainPanel_GenerateBOM();
             this.SuspendLayout();
             // 
             // login1
@@ -39,7 +41,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.login1.Location = new System.Drawing.Point(-10, 214);
+            this.login1.Location = new System.Drawing.Point(2, 0);
             this.login1.Name = "login1";
             this.login1.Size = new System.Drawing.Size(992, 603);
             this.login1.TabIndex = 4;
@@ -56,14 +58,13 @@
             // 
             // mainPanel_GenerateBOM1
             // 
-            this.mainPanel_GenerateBOM1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this._current.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel_GenerateBOM1.BackColor = System.Drawing.Color.White;
-            this.mainPanel_GenerateBOM1.Location = new System.Drawing.Point(2, 0);
-            this.mainPanel_GenerateBOM1.Name = "mainPanel_GenerateBOM1";
-            this.mainPanel_GenerateBOM1.Size = new System.Drawing.Size(698, 603);
-            this.mainPanel_GenerateBOM1.TabIndex = 2;
+            this._current.BackColor = System.Drawing.Color.White;
+            this._current.Location = new System.Drawing.Point(2, 0);
+            this._current.Name = "_current";
+            this._current.Size = new System.Drawing.Size(698, 603);
             // 
             // LandingForm
             // 
@@ -73,7 +74,7 @@
             this.ClientSize = new System.Drawing.Size(994, 603);
             this.Controls.Add(this.login1);
             this.Controls.Add(this.sidePanel1);
-            this.Controls.Add(this.mainPanel_GenerateBOM1);
+            this.Controls.Add(this._current);
             this.MinimumSize = new System.Drawing.Size(1010, 642);
             this.Name = "LandingForm";
             this.Text = "Form1";
@@ -82,7 +83,7 @@
         }
 
         #endregion
-        private MainPanel_GenerateBOM mainPanel_GenerateBOM1;
+        private UserControl _current;
         private SidePanel sidePanel1;
         public Login login1;
     }

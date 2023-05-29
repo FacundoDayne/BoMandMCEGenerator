@@ -11,28 +11,26 @@ namespace BoMandMCEGenerator
 {
     public partial class Login : UserControl
     {
+        Login login;
         public Login()
         {
             InitializeComponent();
+            this.SizeChanged += AccomodateSizeChange;
+            login = this;
         }
 
         private void Login_Paint(object sender, PaintEventArgs e)
         {
-            Control control = (Control)sender;
-            Color color1 = Color.FromArgb(152, 136, 146);
-            Color color2 = Color.FromArgb(134, 106, 124);
-            using (var brush1 = new SolidBrush(color1))
-            using (var brush2 = new SolidBrush(color2))
+            Control control = (Control)sender;         
+            using (SolidBrush brush1 = new SolidBrush(Color.FromArgb(152, 136, 146)))
+            using (SolidBrush brush2 = new SolidBrush(Color.FromArgb(134, 106, 124)))
             {
                 Rectangle rect1 = new Rectangle(control.ClientRectangle.X, control.ClientRectangle.Y,
                                                 control.ClientRectangle.Width / 2, control.ClientRectangle.Height);
                 Rectangle rect2 = new Rectangle(control.ClientRectangle.Width / 2, control.ClientRectangle.Y,
                                                 control.ClientRectangle.Width / 2, control.ClientRectangle.Height);
 
-                // Fill the first half of the control with the first color
                 e.Graphics.FillRectangle(brush1, rect1);
-
-                // Fill the second half of the control with the second color
                 e.Graphics.FillRectangle(brush2, rect2);
             }
         }
@@ -47,7 +45,7 @@ namespace BoMandMCEGenerator
             control.Invalidate();
         }
 
-        private void Login_Paint(object sender, EventArgs e)
+        private void AccomodateSizeChange(object sender, EventArgs e)
         {
             Control control = (Control)sender;
             RaisePaintEvent(control);

@@ -162,7 +162,6 @@
             this.Name = "Login";
             this.Size = new System.Drawing.Size(992, 603);
             this.Load += new System.EventHandler(this.Login_Load);
-            this.SizeChanged += new System.EventHandler(this.Login_Paint);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
