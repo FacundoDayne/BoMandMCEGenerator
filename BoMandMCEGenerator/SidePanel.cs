@@ -12,23 +12,16 @@ namespace BoMandMCEGenerator
 {
     public partial class SidePanel : UserControl
     {
+        
         public SidePanel()
         {
-            InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label1.Text = "AAAAAAAAAAAAAAAAAAAAAAAA";
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            label1.Text = "OOOOOOOOOOOOOOOOOOO";
+            InitializeComponent(); sidePanel = this;
+            btnGenerateBOM.Click += hideDropDown;
+            btnGenerateMCE.Click += hideDropDown;
+            btnAccount.Click += hideDropDown;
+            sidePanel.Click += hideDropDown;
+            btnLogout.Click += logOut;
+            btnLogout.Click += hideDropDown;
 
         }
 
@@ -41,6 +34,13 @@ namespace BoMandMCEGenerator
         {
             DropDownMenuPanel.Hide();
         }
+
+        private void logOut(object sender, EventArgs e)
+        {
+            LandingForm.landingForm.isLoggedIn = false;
+            LandingForm.landingForm.login1.Show();
+        }
+
 
     }
 }

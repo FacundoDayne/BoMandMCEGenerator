@@ -59,9 +59,11 @@ namespace BoMandMCEGenerator
             CenterPanel();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            LandingForm.landingForm.username = txtUsername.Text.ToString();
+            LandingForm.landingForm.changeText();
+            this.Hide();
         }
     }
 }

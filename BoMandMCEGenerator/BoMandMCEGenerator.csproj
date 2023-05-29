@@ -52,11 +52,23 @@
     <Compile Include="LandingForm.Designer.cs">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPanel_GenerateBOM.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MainPanel_GenerateBOM.Designer.cs">
       <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPanel_GenerateMCE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPanel_GenerateMCE.Designer.cs">
+      <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,11 +86,23 @@
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\Trans.cs" />
+    <Compile Include="TestingGrounds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestingGrounds.Designer.cs">
+      <DependentUpon>TestingGrounds.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPanel_GenerateBOM.resx">
       <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel_GenerateMCE.resx">
+      <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestingGrounds.resx">
+      <DependentUpon>TestingGrounds.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -22,7 +22,7 @@ public class RoundButton : Button
     protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
     {
         GraphicsPath grPath = new GraphicsPath();
-        this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(2, 3, this.Width, this.Height, 15, 15)); //play with these values till you are happy
+        this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(2, 3, this.Width, this.Height, 15, 20)); //play with these values till you are happy
         base.OnPaint(e);
     }
 

@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace BoMandMCEGenerator
 {
@@ -30,58 +31,62 @@ namespace BoMandMCEGenerator
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnGenerateBOM = new System.Windows.Forms.Button();
+            this.btnGenerateMCE = new System.Windows.Forms.Button();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDropdown = new System.Windows.Forms.Button();
             this.DropDownMenuPanel = new System.Windows.Forms.TableLayoutPanel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.DropDownMenuPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnGenerateBOM
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnGenerateBOM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-1, 79);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 48);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGenerateBOM.BackColor = System.Drawing.Color.Black;
+            this.btnGenerateBOM.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateBOM.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateBOM.Location = new System.Drawing.Point(-1, 79);
+            this.btnGenerateBOM.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGenerateBOM.Name = "btnGenerateBOM";
+            this.btnGenerateBOM.Size = new System.Drawing.Size(296, 48);
+            this.btnGenerateBOM.TabIndex = 2;
+            this.btnGenerateBOM.Text = "Generate BOM";
+            this.btnGenerateBOM.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnGenerateMCE
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnGenerateMCE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(-1, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(296, 48);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGenerateMCE.BackColor = System.Drawing.Color.Black;
+            this.btnGenerateMCE.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnGenerateMCE.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateMCE.Location = new System.Drawing.Point(-1, 148);
+            this.btnGenerateMCE.Name = "btnGenerateMCE";
+            this.btnGenerateMCE.Size = new System.Drawing.Size(296, 48);
+            this.btnGenerateMCE.TabIndex = 3;
+            this.btnGenerateMCE.Text = "Generate MCE";
+            this.btnGenerateMCE.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblUsername
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(90, 0);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(93, 32);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "USERNAME";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUsername.Location = new System.Drawing.Point(90, 0);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblUsername.Size = new System.Drawing.Size(93, 32);
+            this.lblUsername.TabIndex = 4;
+            this.lblUsername.Text = "USERNAME";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1
             // 
@@ -119,7 +124,7 @@ namespace BoMandMCEGenerator
             this.DropDownMenuPanel.ColumnCount = 1;
             this.DropDownMenuPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.DropDownMenuPanel.Controls.Add(this.btnLogout, 0, 1);
-            this.DropDownMenuPanel.Controls.Add(this.button3, 0, 0);
+            this.DropDownMenuPanel.Controls.Add(this.btnAccount, 0, 0);
             this.DropDownMenuPanel.Location = new System.Drawing.Point(187, 35);
             this.DropDownMenuPanel.Name = "DropDownMenuPanel";
             this.DropDownMenuPanel.RowCount = 2;
@@ -144,20 +149,20 @@ namespace BoMandMCEGenerator
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnAccount
             // 
-            this.button3.BackColor = System.Drawing.Color.LightGray;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 30);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Account";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAccount.BackColor = System.Drawing.Color.LightGray;
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.Location = new System.Drawing.Point(4, 4);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(93, 30);
+            this.btnAccount.TabIndex = 1;
+            this.btnAccount.Text = "Account";
+            this.btnAccount.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -168,8 +173,8 @@ namespace BoMandMCEGenerator
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
             this.tableLayoutPanel1.Controls.Add(this.btnDropdown, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblUsername, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(81, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -185,8 +190,8 @@ namespace BoMandMCEGenerator
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.DropDownMenuPanel);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGenerateMCE);
+            this.Controls.Add(this.btnGenerateBOM);
             this.Name = "SidePanel";
             this.Size = new System.Drawing.Size(294, 592);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -198,16 +203,22 @@ namespace BoMandMCEGenerator
 
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnGenerateBOM;
+        private System.Windows.Forms.Button btnGenerateMCE;
+        public System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnDropdown;
         private System.Windows.Forms.TableLayoutPanel DropDownMenuPanel;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private SidePanel sidePanel;
     }
 }
