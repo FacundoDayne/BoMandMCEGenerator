@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainPanel_GenerateBOM1 = new BoMandMCEGenerator.MainPanel_GenerateBOM();
             this.sidePanel1 = new BoMandMCEGenerator.SidePanel();
+            this.mainPanel_GenerateBOM1 = new BoMandMCEGenerator.MainPanel_GenerateBOM();
             this.SuspendLayout();
+            // 
+            // sidePanel1
+            // 
+            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.sidePanel1.Location = new System.Drawing.Point(700, 0);
+            this.sidePanel1.Name = "sidePanel1";
+            this.sidePanel1.Size = new System.Drawing.Size(294, 603);
+            this.sidePanel1.TabIndex = 3;
             // 
             // mainPanel_GenerateBOM1
             // 
@@ -44,15 +53,6 @@
             this.mainPanel_GenerateBOM1.Size = new System.Drawing.Size(698, 603);
             this.mainPanel_GenerateBOM1.TabIndex = 2;
             // 
-            // sidePanel1
-            // 
-            this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
-            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sidePanel1.Location = new System.Drawing.Point(700, 0);
-            this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(294, 603);
-            this.sidePanel1.TabIndex = 3;
-            // 
             // LandingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -64,7 +64,6 @@
             this.MinimumSize = new System.Drawing.Size(1010, 642);
             this.Name = "LandingForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.LandingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

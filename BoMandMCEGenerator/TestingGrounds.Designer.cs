@@ -1,6 +1,6 @@
 ﻿namespace BoMandMCEGenerator
 {
-    partial class Form1
+    partial class TestingGrounds
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.roundButton1 = new RoundButton();
-            this.roundedTextBox1 = new RoundedTextBox();
+            this.login1 = new BoMandMCEGenerator.Login();
             this.SuspendLayout();
             // 
-            // roundButton1
+            // login1
             // 
-            this.roundButton1.Location = new System.Drawing.Point(185, 144);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(141, 98);
-            this.roundButton1.TabIndex = 0;
-            this.roundButton1.Text = "roundButton1";
-            this.roundButton1.UseVisualStyleBackColor = true;
+            this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.login1.Location = new System.Drawing.Point(1, -3);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(787, 441);
+            this.login1.TabIndex = 0;
             // 
-            // roundedTextBox1
-            // 
-            this.roundedTextBox1.Location = new System.Drawing.Point(520, 222);
-            this.roundedTextBox1.MinimumSize = new System.Drawing.Size(0, 50);
-            this.roundedTextBox1.Name = "roundedTextBox1";
-            this.roundedTextBox1.Size = new System.Drawing.Size(50, 20);
-            this.roundedTextBox1.TabIndex = 1;
-            // 
-            // Form1
+            // TestingGrounds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.roundedTextBox1);
-            this.Controls.Add(this.roundButton1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.login1);
+            this.Name = "TestingGrounds";
+            this.Text = "TestingGrounds";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private RoundButton roundButton1;
-        private RoundedTextBox roundedTextBox1;
+        private Login login1;
     }
 }

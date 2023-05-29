@@ -26,12 +26,21 @@ namespace BoMandMCEGenerator
         {
             label1.Text = "AAAAAAAAAAAAAAAAAAAAAAAA";
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label1.Text = "OOOOOOOOOOOOOOOOOOO";
+
+        }
 
         private void btnDropdown_Click(object sender, EventArgs e)
         {
             DropDownMenuPanel.Visible = !DropDownMenuPanel.Visible;
         }
 
+        private void hideDropDown(object sender, EventArgs e)
+        {
+            DropDownMenuPanel.Hide();
+        }
 
     }
 }
