@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -21,6 +22,8 @@ namespace BoMandMCEGenerator
             InitializeComponent();
             landingForm = this; Controls.Add(this.login1);
             if (!isLoggedIn) { showLogin(); }
+//LITERAL MAGIC CODE, REMOVES FLICKERING
+            typeof(Login).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, login1, new object[] { true });
         }
 
         public void changeText()

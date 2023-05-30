@@ -58,6 +58,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MagicCodes.cs" />
     <Compile Include="MainPanels\MainPanel_GenerateBOM.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +98,12 @@
     </Compile>
     <Compile Include="TestingGrounds.Designer.cs">
       <DependentUpon>TestingGrounds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestPicture.Designer.cs">
+      <DependentUpon>TestPicture.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>

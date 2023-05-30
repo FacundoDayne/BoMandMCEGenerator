@@ -18,6 +18,10 @@ namespace BoMandMCEGenerator
             this.SizeChanged += AccomodateSizeChange;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
             login = this;
+            this.SetStyle(
+            System.Windows.Forms.ControlStyles.UserPaint |
+            System.Windows.Forms.ControlStyles.AllPaintingInWmPaint |
+            System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer,true);
         }
 
         private void Login_Paint(object sender, PaintEventArgs e)
