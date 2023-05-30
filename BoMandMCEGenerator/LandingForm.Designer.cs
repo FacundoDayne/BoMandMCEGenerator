@@ -56,7 +56,7 @@ namespace BoMandMCEGenerator
             this.sidePanel1.Size = new System.Drawing.Size(294, 603);
             this.sidePanel1.TabIndex = 3;
             // 
-            // mainPanel_GenerateBOM1
+            // _current
             // 
             this._current.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -65,6 +65,7 @@ namespace BoMandMCEGenerator
             this._current.Location = new System.Drawing.Point(2, 0);
             this._current.Name = "_current";
             this._current.Size = new System.Drawing.Size(698, 603);
+            this._current.TabIndex = 4;
             // 
             // LandingForm
             // 
@@ -72,7 +73,6 @@ namespace BoMandMCEGenerator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(994, 603);
-            this.Controls.Add(this.login1);
             this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this._current);
             this.MinimumSize = new System.Drawing.Size(1010, 642);
@@ -83,9 +83,9 @@ namespace BoMandMCEGenerator
         }
 
         #endregion
-        private UserControl _current;
         private SidePanel sidePanel1;
         public Login login1;
+        private UserControl _current;
     }
 }
 

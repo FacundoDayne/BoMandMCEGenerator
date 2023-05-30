@@ -58,17 +58,23 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPanel_GenerateBOM.cs">
+    <Compile Include="MainPanels\MainPanel_GenerateBOM.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainPanel_GenerateBOM.Designer.cs">
+    <Compile Include="MainPanels\MainPanel_GenerateBOM.Designer.cs">
       <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPanel_GenerateMCE.cs">
+    <Compile Include="MainPanels\MainPanel_GenerateMCE.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainPanel_GenerateMCE.Designer.cs">
+    <Compile Include="MainPanels\MainPanel_GenerateMCE.Designer.cs">
       <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPanels\MainPane_ViewBOM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPanels\MainPane_ViewBOM.Designer.cs">
+      <DependentUpon>MainPane_ViewBOM.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,11 +104,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPanel_GenerateBOM.resx">
+    <EmbeddedResource Include="MainPanels\MainPanel_GenerateBOM.resx">
       <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPanel_GenerateMCE.resx">
+    <EmbeddedResource Include="MainPanels\MainPanel_GenerateMCE.resx">
       <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanels\MainPane_ViewBOM.resx">
+      <DependentUpon>MainPane_ViewBOM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bronya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

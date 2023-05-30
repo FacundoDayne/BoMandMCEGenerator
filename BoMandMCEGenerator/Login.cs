@@ -16,6 +16,7 @@ namespace BoMandMCEGenerator
         {
             InitializeComponent();
             this.SizeChanged += AccomodateSizeChange;
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
             login = this;
         }
 

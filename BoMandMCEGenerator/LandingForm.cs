@@ -51,6 +51,8 @@ namespace BoMandMCEGenerator
                 Console.WriteLine("Main panel changed to: " + nextMask.Name.ToString());
                 mainPanelName = nextMask.Name.ToString();
                 this.Controls.Remove(_current);
+//if this code breaks, there might have been an auto generated code that turned _current into a MainPanel_GenerateBOM class
+//change it in the Designer class to fix
                 _current = nextMask;
                 this.Controls.Add(_current);
                 this._current.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
