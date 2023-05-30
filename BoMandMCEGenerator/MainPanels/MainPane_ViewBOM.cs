@@ -14,7 +14,6 @@ namespace BoMandMCEGenerator.MainPanels
     {
         public MainPane_ViewBOM()
         {
-
             InitializeComponent();
             this.SizeChanged += reTable;
             this.OnSizeChanged(EventArgs.Empty);
@@ -117,7 +116,9 @@ namespace BoMandMCEGenerator.MainPanels
                     }
                 }
             }
+            
             int cells = 0;
+            //Checks to see if the cells are empty
             for(int i = 1; i < tableLayoutPanel1.RowCount + 1; i++)
             {
                 int row = i - 1;
@@ -125,9 +126,11 @@ namespace BoMandMCEGenerator.MainPanels
                 {
                     int col = j - 1;
                     Control control = tableLayoutPanel1.GetControlFromPosition(col, row);
+                    //Places a placeholder in the cells that are empty
                     if (control == null) {
                         Console.WriteLine("Cell at Column: {0} Row: {1} is empty", col, row);
-                        tableLayoutPanel1.Controls.Add(new TestPicture(Resources.bronya));
+                        tableLayoutPanel1.Controls.Add(new ViewBOM_Plate(LandingForm.landingForm.UserData.getPreviousBOMAt(0)));
+                        //tableLayoutPanel1.Controls.Add(new TestPicture(Resources.bronya));
                     }
                     cells++;
                 }

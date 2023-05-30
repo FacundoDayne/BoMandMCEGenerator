@@ -17,6 +17,7 @@ namespace BoMandMCEGenerator
         private UserControl currentMainPanel;
         public string username = "";
         string mainPanelName = "MainPanel_GenerateBOM";
+        public UserData UserData;
         public LandingForm()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace BoMandMCEGenerator
             if (!isLoggedIn) { showLogin(); }
 //LITERAL MAGIC CODE, REMOVES FLICKERING
             typeof(Login).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, login1, new object[] { true });
+            UserData = new UserData();
+            UserData.addBOM(DateTime.Now, 123, 500);
         }
 
         public void changeText()

@@ -77,6 +77,13 @@
     <Compile Include="MainPanels\MainPane_ViewBOM.Designer.cs">
       <DependentUpon>MainPane_ViewBOM.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainPanels\MainPanel Sub Controls\ViewBOM_Plate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPanels\MainPanel Sub Controls\ViewBOM_Plate.Designer.cs">
+      <DependentUpon>ViewBOM_Plate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreviousBOM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\MyRectangle.cs" />
@@ -99,12 +106,13 @@
     <Compile Include="TestingGrounds.Designer.cs">
       <DependentUpon>TestingGrounds.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestPicture.cs">
+    <Compile Include="MainPanels\MainPanel Sub Controls\TestPicture.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TestPicture.Designer.cs">
+    <Compile Include="MainPanels\MainPanel Sub Controls\TestPicture.Designer.cs">
       <DependentUpon>TestPicture.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserData.cs" />
     <EmbeddedResource Include="LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPanels\MainPane_ViewBOM.resx">
       <DependentUpon>MainPane_ViewBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanels\MainPanel Sub Controls\ViewBOM_Plate.resx">
+      <DependentUpon>ViewBOM_Plate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
