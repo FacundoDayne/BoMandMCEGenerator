@@ -13,6 +13,7 @@ namespace BoMandMCEGenerator
         public PreviousBOM getPreviousBOMAt(int index) { return previousBOMs[index]; }
         public List<PreviousBOM> getPreviousBOM() { return previousBOMs; }
 
+        
 
     }
 }

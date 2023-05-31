@@ -17,7 +17,15 @@ namespace BoMandMCEGenerator
         */
 
         //SOLUTION B
-        //typeof(Login).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, login1, new object[] { true });
+        //typeof(
+        //
+        //          PLACE OBJECT TYPE HERE
+        //
+        //).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null,
+        //
+        //          PLACE OBJECT NAME HERE
+        //
+        //, new object[] { true });
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoMandMCEGenerator.Custom_Usercontrols;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace BoMandMCEGenerator
         public string username = "";
         string mainPanelName = "MainPanel_GenerateBOM";
         public UserData UserData;
+        private MainPanel_Panel MainPanel_Panel = new MainPanel_Panel();
         public LandingForm()
         {
             InitializeComponent();
@@ -59,15 +61,9 @@ namespace BoMandMCEGenerator
                 this.Controls.Remove(_current);
 //if this code breaks, there might have been an auto generated code that turned _current into a MainPanel_GenerateBOM class
 //change it in the Designer class to fix
-                _current = nextMask;
+                //_current = nextMask;
+                _current = MainPanel_Panel.Conform_MainPanel(size, nextMask);
                 this.Controls.Add(_current);
-                this._current.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
-                this._current.BackColor = System.Drawing.Color.White;
-                this._current.Location = new System.Drawing.Point(2, 0);
-                this._current.Name = "_current";
-                this._current.Size = new System.Drawing.Size(size[0], size[1]);
             }
         }
     }

@@ -16,9 +16,9 @@ namespace BoMandMCEGenerator.MainPanels
             System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer,
             true);
 
-            lblDate.Text = previousBOM.getDate.ToString();
-            lblID.Text = previousBOM.getID.ToString();
-            lblTotal.Text = previousBOM.getTotal.ToString();
+            lblDate.Text = previousBOM.getDate().ToString();
+            lblID.Text = previousBOM.getID().ToString();
+            lblTotal.Text = previousBOM.getTotal().ToString();
 
 
         }
