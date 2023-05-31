@@ -36,7 +36,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 44);
+            this.label3.Location = new System.Drawing.Point(43, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 25);
             this.label3.TabIndex = 4;
@@ -50,26 +50,26 @@
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(62, 150);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 200);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(51, 109);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 147);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1286, 41);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1071, 30);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // MainPane_ViewBOM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label3);
-            this.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "MainPane_ViewBOM";
-            this.Size = new System.Drawing.Size(1395, 1206);
+            this.Size = new System.Drawing.Size(1163, 882);
             this.ResumeLayout(false);
             this.PerformLayout();
 

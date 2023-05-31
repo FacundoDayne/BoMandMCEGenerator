@@ -1,5 +1,6 @@
 ﻿using BoMandMCEGenerator.Properties;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +18,8 @@ namespace BoMandMCEGenerator.MainPanels
         {
             InitializeComponent();
             previousBOM = new SampleData(17).previousBOMs;
-            Console.WriteLine(previousBOM.Count);
-            PreviousBOM previousBOM = previousBOM.Pop();
-            Console.WriteLine("New BOM added\nDate: {0}\nID: {1}\nTotal: {2}\nProject: {3}", .ToString(), ID.ToString(), Total.ToString("0.##"), Project.ToString());
-            //this.SizeChanged += reTable;
+            this.SizeChanged += reTable;
             this.OnSizeChanged(EventArgs.Empty);
-            
         }
 
         private void reTable(object sender, EventArgs e)
@@ -140,14 +137,18 @@ namespace BoMandMCEGenerator.MainPanels
                 //Checks to see if the cells are empty
                 for (int i = 1; i < tableLayoutPanel1.RowCount + 1; i++)
                 {
-                    int row = i - 1;
                     for (int j = 1; j < tableLayoutPanel1.ColumnCount + 1; j++)
                     {
-                        int col = j - 1;
-                        //Places a placeholder in the cells that are empty
-                        tableLayoutPanel1.Controls.Add(new ViewBOM_Plate(previousBOM.Pop()));
-                        cells++;
-                    }
+                        try { 
+                            //Places a placeholder in the cells that are empty
+                            tableLayoutPanel1.Controls.Add(new ViewBOM_Plate(previousBOM.Pop()));
+                            cells++;
+                        }
+                        catch (InvalidOperationException b)
+                        {
+                            break;
+                        }
+                }
                 }
                 Console.WriteLine("Number of cells: {0}", cells);
             }
