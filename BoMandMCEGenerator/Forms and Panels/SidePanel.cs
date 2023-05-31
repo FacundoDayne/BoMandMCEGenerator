@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoMandMCEGenerator.MainPanels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,7 @@ namespace BoMandMCEGenerator
             btnLogout.Click += hideDropDown;
             btnGenerateBOM.Click += requestChange;
             btnGenerateMCE.Click += requestChange;
-
+            btnViewBOM.Click += requestChange;
         }
 
         private void btnDropdown_Click(object sender, EventArgs e)
@@ -53,6 +54,9 @@ namespace BoMandMCEGenerator
                     break;
                 case "btnGenerateMCE":
                     LandingForm.landingForm.maskChange(new MainPanel_GenerateMCE());
+                    break;
+                case "btnViewBOM":
+                    LandingForm.landingForm.maskChange(new MainPane_ViewBOM());
                     break;
             }
         }

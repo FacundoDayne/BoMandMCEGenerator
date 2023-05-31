@@ -11,12 +11,14 @@ namespace BoMandMCEGenerator
         DateTime Date;
         int ID;
         float Total;
+        string Project;
 
-        public PreviousBOM(DateTime Date, int ID, float Total)
+        public PreviousBOM(DateTime Date, int ID, float Total, string Project)
         {
             this.Date = Date;
             this.ID = ID;
             this.Total = Total;
+            this.Project = Project;
         }
         /*
         public DateTime Date { get { return Date; } set { Date = value; } }
@@ -27,6 +29,7 @@ namespace BoMandMCEGenerator
         public DateTime getDate() { return Date; }
         public int getID() { return ID; }
         public float getTotal() { return Total; }
+        public string getProject() { return Project; }
 
     }
 }

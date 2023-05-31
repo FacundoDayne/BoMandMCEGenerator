@@ -18,9 +18,8 @@ namespace BoMandMCEGenerator.MainPanels
 
             lblDate.Text = previousBOM.getDate().ToString();
             lblID.Text = previousBOM.getID().ToString();
-            lblTotal.Text = previousBOM.getTotal().ToString();
-
-
+            lblTotal.Text = "Php " + previousBOM.getTotal().ToString("0.##");
+            lblProject.Text = previousBOM.getProject().ToString();
         }
     }
 }

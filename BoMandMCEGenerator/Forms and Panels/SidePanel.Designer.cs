@@ -40,6 +40,7 @@ namespace BoMandMCEGenerator
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnViewBOM = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.DropDownMenuPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -67,7 +68,8 @@ namespace BoMandMCEGenerator
             this.btnGenerateMCE.BackColor = System.Drawing.Color.Black;
             this.btnGenerateMCE.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGenerateMCE.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateMCE.Location = new System.Drawing.Point(-1, 148);
+            this.btnGenerateMCE.Location = new System.Drawing.Point(-1, 217);
+            this.btnGenerateMCE.Margin = new System.Windows.Forms.Padding(0);
             this.btnGenerateMCE.Name = "btnGenerateMCE";
             this.btnGenerateMCE.Size = new System.Drawing.Size(296, 48);
             this.btnGenerateMCE.TabIndex = 3;
@@ -183,11 +185,26 @@ namespace BoMandMCEGenerator
             this.tableLayoutPanel1.Size = new System.Drawing.Size(207, 32);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
+            // btnViewBOM
+            // 
+            this.btnViewBOM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewBOM.BackColor = System.Drawing.Color.Black;
+            this.btnViewBOM.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnViewBOM.ForeColor = System.Drawing.Color.White;
+            this.btnViewBOM.Location = new System.Drawing.Point(-1, 148);
+            this.btnViewBOM.Name = "btnViewBOM";
+            this.btnViewBOM.Size = new System.Drawing.Size(296, 48);
+            this.btnViewBOM.TabIndex = 10;
+            this.btnViewBOM.Text = "View BOMS";
+            this.btnViewBOM.UseVisualStyleBackColor = false;
+            // 
             // SidePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.Controls.Add(this.btnViewBOM);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.DropDownMenuPanel);
             this.Controls.Add(this.btnGenerateMCE);
@@ -220,5 +237,6 @@ namespace BoMandMCEGenerator
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private SidePanel sidePanel;
+        private Button btnViewBOM;
     }
 }

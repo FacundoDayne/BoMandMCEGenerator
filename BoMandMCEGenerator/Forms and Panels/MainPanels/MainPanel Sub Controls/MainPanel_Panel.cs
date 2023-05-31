@@ -11,18 +11,19 @@ namespace BoMandMCEGenerator.Custom_Usercontrols
 {
     public partial class MainPanel_Panel : UserControl
     {
-        public MainPanel_Panel(int[] size)
-        {
+        public UserControl newPanel;
+        public MainPanel_Panel(int[] size, UserControl userControl)
+        {            
             InitializeComponent();
-            this.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            newPanel = userControl;
+            newPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
                 | System.Windows.Forms.AnchorStyles.Right)));
-            this.BackColor = System.Drawing.Color.White;
-            this.Location = new System.Drawing.Point(2, 0);
-            this.Name = "_current";
-            this.Size = new System.Drawing.Size(size[0], size[1]);
+            newPanel.BackColor = System.Drawing.Color.White;
+            newPanel.Location = new System.Drawing.Point(2, 0);
+            newPanel.Name = "_current";
+            newPanel.Size = new System.Drawing.Size(size[0], size[1]);
         }
-
         public MainPanel_Panel()
         {
             InitializeComponent();

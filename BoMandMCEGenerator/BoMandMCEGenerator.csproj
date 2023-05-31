@@ -106,12 +106,6 @@
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom Usercontrols\RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\Trans.cs" />
-    <Compile Include="Forms and Panels\TestingGrounds.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms and Panels\TestingGrounds.Designer.cs">
-      <DependentUpon>TestingGrounds.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\TestPicture.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -119,6 +113,7 @@
       <DependentUpon>TestPicture.cs</DependentUpon>
     </Compile>
     <Compile Include="Miscellaneous Classes\UserData.cs" />
+    <Compile Include="Miscellaneous Classes\SampleData.cs" />
     <EmbeddedResource Include="Forms and Panels\LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,9 +144,6 @@
     </Compile>
     <EmbeddedResource Include="Forms and Panels\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms and Panels\TestingGrounds.resx">
-      <DependentUpon>TestingGrounds.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -12,130 +12,146 @@ namespace BoMandMCEGenerator.MainPanels
 {
     public partial class MainPane_ViewBOM : UserControl
     {
+        Stack<PreviousBOM> previousBOM;
         public MainPane_ViewBOM()
         {
             InitializeComponent();
-            this.SizeChanged += reTable;
+            previousBOM = new SampleData(17).previousBOMs;
+            Console.WriteLine(previousBOM.Count);
+            PreviousBOM previousBOM = previousBOM.Pop();
+            Console.WriteLine("New BOM added\nDate: {0}\nID: {1}\nTotal: {2}\nProject: {3}", .ToString(), ID.ToString(), Total.ToString("0.##"), Project.ToString());
+            //this.SizeChanged += reTable;
             this.OnSizeChanged(EventArgs.Empty);
+            
         }
 
         private void reTable(object sender, EventArgs e)
         {
-            // Define the initial number of columns and rows
-            int initialColumns = tableLayoutPanel1.ColumnCount;
-            int initialRows = tableLayoutPanel1.RowCount;
-
-            // Define the width and height increments
-            int columnWidthIncrement = 220;
-            int rowHeightIncrement = 150;
-
-            // Calculate the total number of columns and rows
-            //int totalColumns = (int)(initialColumns + (tableLayoutPanel1.Width - tableLayoutPanel1.ColumnStyles[0].Width) / columnWidthIncrement);
-            //int totalRows = (int)(initialRows + (tableLayoutPanel1.Height - tableLayoutPanel1.RowStyles[0].Height) / rowHeightIncrement);
-
-            int desiredColumns = (int)(tableLayoutPanel1.Width / 200);
-            int desiredRows = (int)(tableLayoutPanel1.Height / 200) + 1;
-
-            Console.WriteLine("Total Rows: " + desiredRows + "\nTotal Columns: " + desiredColumns);
-            Console.WriteLine("Current Rows: " + tableLayoutPanel1.RowCount + "\nCurrent Columns: " + tableLayoutPanel1.ColumnCount);
-
-            // Adjust the column styles
-            if (initialColumns != desiredColumns)
+            if(LandingForm.landingForm.WindowState != FormWindowState.Minimized)
             {
-                tableLayoutPanel1.ColumnCount = desiredColumns;
+                // Define the initial number of columns and rows
+                int initialColumns = tableLayoutPanel1.ColumnCount;
+                int initialRows = tableLayoutPanel1.RowCount;
+                int neededCells = previousBOM.Count;
+                int currentCells = initialColumns * initialRows;
 
-                for (int i = initialColumns; i != desiredColumns;)
+                // Calculate the total number of columns and rows
+                int desiredColumns = (int)(tableLayoutPanel1.Width / 400);
+                int desiredRows = 0;
+                try{
+                    desiredRows = (int)Math.Ceiling(Convert.ToDouble((neededCells + desiredColumns - 1) / desiredColumns));
+                }
+                catch (DivideByZeroException d)
                 {
-                    if (initialColumns < desiredColumns)
+                    Console.WriteLine("Minimized: {0}",d);
+                    desiredColumns = 1;
+                }                
+                if (neededCells > currentCells)
+                {
+
+                    bool g = neededCells < currentCells - desiredColumns;
+
+                }
+                //int desiredRows = (int)(tableLayoutPanel1.Height / 300) + 1;
+
+                Console.WriteLine("Total Rows: " + desiredRows + "\nTotal Columns: " + desiredColumns);
+                Console.WriteLine("Current Rows: " + tableLayoutPanel1.RowCount + "\nCurrent Columns: " + tableLayoutPanel1.ColumnCount);
+
+                // Adjust the column styles
+                if (initialColumns != desiredColumns)
+                {
+                    tableLayoutPanel1.ColumnCount = desiredColumns;
+
+                    for (int i = initialColumns; i != desiredColumns;)
                     {
-                        tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / tableLayoutPanel1.ColumnCount));
-                        i = i + 1;
+                        if (initialColumns < desiredColumns)
+                        {
+                            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / tableLayoutPanel1.ColumnCount));
+                            i = i + 1;
+                        }
+                        else if (initialColumns > desiredColumns)
+                        {
+                            try
+                            {
+                                tableLayoutPanel1.ColumnStyles.RemoveAt(tableLayoutPanel1.ColumnCount - 1);
+                                i = i - 1;
+                            }
+                            catch (ArgumentOutOfRangeException d)
+                            {
+                                Console.WriteLine("Line 63");
+                            }
+                        }
                     }
-                    else if (initialColumns > desiredColumns)
+                    for (int i = 0; i < tableLayoutPanel1.ColumnCount; i++)
                     {
                         try
                         {
-                            tableLayoutPanel1.ColumnStyles.RemoveAt(tableLayoutPanel1.ColumnCount - 1);
-                            i = i - 1;
+                            tableLayoutPanel1.ColumnStyles[i] = new ColumnStyle(SizeType.Percent, 100 / tableLayoutPanel1.ColumnCount);
                         }
+
                         catch (ArgumentOutOfRangeException d)
                         {
-                            Console.WriteLine("Line 63");
+                            Console.WriteLine("Line 76");
                         }
                     }
                 }
-                for (int i = 0; i < tableLayoutPanel1.ColumnCount; i++)
+
+                //Adjust the Rows
+                if (initialRows != desiredRows)
                 {
-                    try
-                    {
-                        tableLayoutPanel1.ColumnStyles[i] = new ColumnStyle(SizeType.Percent, 100 / tableLayoutPanel1.ColumnCount);
-                    }
+                    tableLayoutPanel1.RowCount = desiredRows;
 
-                    catch (ArgumentOutOfRangeException d)
+                    for (int i = initialRows; i != desiredRows;)
                     {
-                        Console.WriteLine("Line 76");
+                        if (initialRows < desiredRows)
+                        {
+                            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 300));
+                            i = i + 1;
+                        }
+                        else if (initialRows > desiredRows)
+                        {
+                            try
+                            {
+                                tableLayoutPanel1.RowStyles.RemoveAt(tableLayoutPanel1.RowCount - 1);
+                                i = i - 1;
+                            }
+                            catch (ArgumentOutOfRangeException d)
+                            {
+                                Console.WriteLine("Line 102");
+                                break;
+                            }
+                        }
                     }
-                }
-            }
-
-            //Adjust the Rows
-            if (initialRows != desiredRows)
-            {
-                tableLayoutPanel1.RowCount = desiredRows;
-
-                for (int i = initialRows; i != desiredRows;)
-                {
-                    if (initialRows < desiredRows)
-                    {
-                        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100 / tableLayoutPanel1.RowCount));
-                        i = i + 1;
-                    }
-                    else if (initialRows > desiredRows)
+                    for (int i = 0; i < tableLayoutPanel1.RowCount; i++)
                     {
                         try
                         {
-                            tableLayoutPanel1.RowStyles.RemoveAt(tableLayoutPanel1.RowCount - 1);
-                            i = i - 1;
+                            tableLayoutPanel1.RowStyles[i] = new RowStyle(SizeType.Percent, 100 / tableLayoutPanel1.RowCount);
                         }
+
                         catch (ArgumentOutOfRangeException d)
                         {
-                            Console.WriteLine("Line 102");
+                            Console.WriteLine("Line 76");
                         }
                     }
                 }
-                for (int i = 0; i < tableLayoutPanel1.RowCount; i++)
-                {
-                    try
-                    {
-                        tableLayoutPanel1.RowStyles[i] = new RowStyle(SizeType.Percent, 100 / tableLayoutPanel1.RowCount);
-                    }
 
-                    catch (ArgumentOutOfRangeException d)
+                int cells = 0;
+                //Checks to see if the cells are empty
+                for (int i = 1; i < tableLayoutPanel1.RowCount + 1; i++)
+                {
+                    int row = i - 1;
+                    for (int j = 1; j < tableLayoutPanel1.ColumnCount + 1; j++)
                     {
-                        Console.WriteLine("Line 76");
+                        int col = j - 1;
+                        //Places a placeholder in the cells that are empty
+                        tableLayoutPanel1.Controls.Add(new ViewBOM_Plate(previousBOM.Pop()));
+                        cells++;
                     }
                 }
+                Console.WriteLine("Number of cells: {0}", cells);
             }
             
-            int cells = 0;
-            //Checks to see if the cells are empty
-            for(int i = 1; i < tableLayoutPanel1.RowCount + 1; i++)
-            {
-                int row = i - 1;
-                for (int j = 1; j < tableLayoutPanel1.ColumnCount + 1; j++)
-                {
-                    int col = j - 1;
-                    Control control = tableLayoutPanel1.GetControlFromPosition(col, row);
-                    //Places a placeholder in the cells that are empty
-                    if (control == null) {
-                        Console.WriteLine("Cell at Column: {0} Row: {1} is empty", col, row);
-                        tableLayoutPanel1.Controls.Add(new ViewBOM_Plate(LandingForm.landingForm.UserData.getPreviousBOMAt(0)));
-                        //tableLayoutPanel1.Controls.Add(new TestPicture(Resources.bronya));
-                    }
-                    cells++;
-                }
-            }
-            Console.WriteLine("Number of cells: {0}", cells);
         } 
     }
 }

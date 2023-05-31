@@ -18,8 +18,6 @@ namespace BoMandMCEGenerator
         private UserControl currentMainPanel;
         public string username = "";
         string mainPanelName = "MainPanel_GenerateBOM";
-        public UserData UserData;
-        private MainPanel_Panel MainPanel_Panel = new MainPanel_Panel();
         public LandingForm()
         {
             InitializeComponent();
@@ -27,8 +25,7 @@ namespace BoMandMCEGenerator
             if (!isLoggedIn) { showLogin(); }
 //LITERAL MAGIC CODE, REMOVES FLICKERING
             typeof(Login).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, login1, new object[] { true });
-            UserData = new UserData();
-            UserData.addBOM(DateTime.Now, 123, 500);
+            Stack<PreviousBOM> a = new SampleData(20).previousBOMs;
         }
 
         public void changeText()
@@ -46,14 +43,6 @@ namespace BoMandMCEGenerator
         public void maskChange (UserControl nextMask)
         {
             int[] size = { _current.Width, _current.Height };
-            if (mainPanelName == nextMask.Name.ToString())
-            {
-                Console.WriteLine("Same thing");
-            }
-            else
-            {
-                Console.WriteLine("difference\n" + mainPanelName + "\n"+ nextMask.Name.ToString());
-            }
             if (mainPanelName != nextMask.Name.ToString())
             {
                 Console.WriteLine("Main panel changed to: " + nextMask.Name.ToString());
@@ -61,8 +50,7 @@ namespace BoMandMCEGenerator
                 this.Controls.Remove(_current);
 //if this code breaks, there might have been an auto generated code that turned _current into a MainPanel_GenerateBOM class
 //change it in the Designer class to fix
-                //_current = nextMask;
-                _current = MainPanel_Panel.Conform_MainPanel(size, nextMask);
+                _current = new MainPanel_Panel(size, nextMask).newPanel;
                 this.Controls.Add(_current);
             }
         }
