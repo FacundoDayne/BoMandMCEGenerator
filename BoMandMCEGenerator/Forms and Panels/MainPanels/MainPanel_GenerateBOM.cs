@@ -24,7 +24,7 @@ namespace BoMandMCEGenerator
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            LandingForm.landingForm.maskChange(new MainPane_ViewBOM());
+            LandingForm.landingForm.maskChange(new MainPanel_ViewBOM());
         }
 
         public MainPanel_GenerateBOM()

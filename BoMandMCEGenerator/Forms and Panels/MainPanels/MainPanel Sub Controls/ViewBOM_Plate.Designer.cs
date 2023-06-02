@@ -54,9 +54,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 40);
+            this.label2.Location = new System.Drawing.Point(3, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 20);
+            this.label2.Size = new System.Drawing.Size(18, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID";
             // 
@@ -65,9 +65,9 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 80);
+            this.label3.Location = new System.Drawing.Point(3, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 20);
+            this.label3.Size = new System.Drawing.Size(31, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total";
             // 
@@ -86,7 +86,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblDate, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblID, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 9);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -97,16 +97,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(166, 163);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(166, 169);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // lblProject
             // 
             this.lblProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblProject.AutoSize = true;
-            this.lblProject.Location = new System.Drawing.Point(58, 140);
+            this.lblProject.Location = new System.Drawing.Point(58, 147);
             this.lblProject.Name = "lblProject";
-            this.lblProject.Size = new System.Drawing.Size(50, 23);
+            this.lblProject.Size = new System.Drawing.Size(50, 22);
             this.lblProject.TabIndex = 7;
             this.lblProject.Text = "lblProject";
             // 
@@ -114,9 +114,9 @@
             // 
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(62, 100);
+            this.lblTotal.Location = new System.Drawing.Point(62, 105);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(41, 20);
+            this.lblTotal.Size = new System.Drawing.Size(41, 21);
             this.lblTotal.TabIndex = 5;
             this.lblTotal.Text = "lblTotal";
             // 
@@ -124,9 +124,9 @@
             // 
             this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(63, 20);
+            this.lblDate.Location = new System.Drawing.Point(63, 21);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(40, 20);
+            this.lblDate.Size = new System.Drawing.Size(40, 21);
             this.lblDate.TabIndex = 3;
             this.lblDate.Text = "lblDate";
             // 
@@ -134,9 +134,9 @@
             // 
             this.lblID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(69, 60);
+            this.lblID.Location = new System.Drawing.Point(69, 63);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(28, 20);
+            this.lblID.Size = new System.Drawing.Size(28, 21);
             this.lblID.TabIndex = 4;
             this.lblID.Text = "lblID";
             // 
@@ -145,9 +145,9 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 120);
+            this.label4.Location = new System.Drawing.Point(3, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.Size = new System.Drawing.Size(71, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Project Name";
             // 

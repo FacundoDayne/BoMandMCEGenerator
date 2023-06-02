@@ -56,7 +56,7 @@ namespace BoMandMCEGenerator
                     LandingForm.landingForm.maskChange(new MainPanel_GenerateMCE());
                     break;
                 case "btnViewBOM":
-                    LandingForm.landingForm.maskChange(new MainPane_ViewBOM());
+                    LandingForm.landingForm.maskChange(new MainPanel_ViewBOM());
                     break;
             }
         }

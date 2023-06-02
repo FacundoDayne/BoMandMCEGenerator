@@ -64,6 +64,12 @@
     <Compile Include="Forms and Panels\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ExpandView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ExpandView.Designer.cs">
+      <DependentUpon>MainPanel_ExpandView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MagicCodes.cs" />
     <Compile Include="Forms and Panels\MainPanels\MainPanel_GenerateBOM.cs">
       <SubType>UserControl</SubType>
@@ -77,11 +83,11 @@
     <Compile Include="Forms and Panels\MainPanels\MainPanel_GenerateMCE.Designer.cs">
       <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms and Panels\MainPanels\MainPane_ViewBOM.cs">
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ViewBOM.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms and Panels\MainPanels\MainPane_ViewBOM.Designer.cs">
-      <DependentUpon>MainPane_ViewBOM.cs</DependentUpon>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ViewBOM.Designer.cs">
+      <DependentUpon>MainPanel_ViewBOM.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\ViewBOM_Plate.cs">
       <SubType>UserControl</SubType>
@@ -120,14 +126,17 @@
     <EmbeddedResource Include="Forms and Panels\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_ExpandView.resx">
+      <DependentUpon>MainPanel_ExpandView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_GenerateBOM.resx">
       <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_GenerateMCE.resx">
       <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPane_ViewBOM.resx">
-      <DependentUpon>MainPane_ViewBOM.cs</DependentUpon>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_ViewBOM.resx">
+      <DependentUpon>MainPanel_ViewBOM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel Sub Controls\ViewBOM_Plate.resx">
       <DependentUpon>ViewBOM_Plate.cs</DependentUpon>

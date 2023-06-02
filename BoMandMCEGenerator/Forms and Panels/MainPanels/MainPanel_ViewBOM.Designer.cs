@@ -1,6 +1,6 @@
 ﻿namespace BoMandMCEGenerator.MainPanels
 {
-    partial class MainPane_ViewBOM
+    partial class MainPanel_ViewBOM
     {
         /// <summary> 
         /// Required designer variable.
@@ -55,7 +55,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1071, 30);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(606, 30);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // MainPane_ViewBOM
@@ -69,7 +69,7 @@
             this.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "MainPane_ViewBOM";
-            this.Size = new System.Drawing.Size(1163, 882);
+            this.Size = new System.Drawing.Size(698, 603);
             this.ResumeLayout(false);
             this.PerformLayout();
 

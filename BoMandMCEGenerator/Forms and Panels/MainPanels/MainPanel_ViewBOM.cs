@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace BoMandMCEGenerator.MainPanels
 {
-    public partial class MainPane_ViewBOM : UserControl
+    public partial class MainPanel_ViewBOM : UserControl
     {
         Stack<PreviousBOM> previousBOM;
-        public MainPane_ViewBOM()
+        public MainPanel_ViewBOM()
         {
             InitializeComponent();
             previousBOM = new SampleData(17).previousBOMs;
