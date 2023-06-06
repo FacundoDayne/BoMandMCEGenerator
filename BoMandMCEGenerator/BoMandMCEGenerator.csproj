@@ -43,31 +43,121 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LandingForm.cs">
+    <Compile Include="Forms and Panels\EditCellForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LandingForm.Designer.cs">
-      <DependentUpon>LandingForm.cs</DependentUpon>
+    <Compile Include="Forms and Panels\EditCellForm.Designer.cs">
+      <DependentUpon>EditCellForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPanel_GenerateBOM.cs">
+    <Compile Include="Miscellaneous Classes\BillOfMaterials.cs" />
+    <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\MainPanel_Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainPanel_GenerateBOM.Designer.cs">
+    <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\MainPanel_Panel.Designer.cs">
+      <DependentUpon>MainPanel_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Usercontrols\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\LandingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\LandingForm.Designer.cs">
+      <DependentUpon>LandingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms and Panels\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ExpandView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ExpandView.Designer.cs">
+      <DependentUpon>MainPanel_ExpandView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagicCodes.cs" />
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_GenerateBOM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_GenerateBOM.Designer.cs">
       <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_GenerateMCE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_GenerateMCE.Designer.cs">
+      <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ViewBOM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_ViewBOM.Designer.cs">
+      <DependentUpon>MainPanel_ViewBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\ViewBOM_Plate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\ViewBOM_Plate.Designer.cs">
+      <DependentUpon>ViewBOM_Plate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_LandingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_LandingPanel.Designer.cs">
+      <DependentUpon>MainPanel_LandingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Classes\PreviousBOM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SidePanel.cs">
+    <Compile Include="Custom Usercontrols\RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\MyRectangle.cs" />
+    <Compile Include="Custom Usercontrols\RoundedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Usercontrols\RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\RoundedTextBox OBSOLETE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\SidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SidePanel.Designer.cs">
+    <Compile Include="Forms and Panels\SidePanel.Designer.cs">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LandingForm.resx">
+    <Compile Include="Custom Usercontrols\RoundedTextbox %28DONT WORK, MAYBE REUSABLE %29\Trans.cs" />
+    <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\TestPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\TestPicture.Designer.cs">
+      <DependentUpon>TestPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Classes\SampleData.cs" />
+    <EmbeddedResource Include="Forms and Panels\LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPanel_GenerateBOM.resx">
+    <EmbeddedResource Include="Forms and Panels\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\EditCellForm.resx">
+      <DependentUpon>EditCellForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_ExpandView.resx">
+      <DependentUpon>MainPanel_ExpandView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_GenerateBOM.resx">
       <DependentUpon>MainPanel_GenerateBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_GenerateMCE.resx">
+      <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_LandingPanel.resx">
+      <DependentUpon>MainPanel_LandingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_ViewBOM.resx">
+      <DependentUpon>MainPanel_ViewBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel Sub Controls\ViewBOM_Plate.resx">
+      <DependentUpon>ViewBOM_Plate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,8 +167,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SidePanel.resx">
+    <EmbeddedResource Include="Forms and Panels\SidePanel.resx">
       <DependentUpon>SidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -90,6 +181,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DropDownIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bronya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

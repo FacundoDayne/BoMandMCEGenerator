@@ -1,6 +1,6 @@
 ﻿namespace BoMandMCEGenerator
 {
-    partial class MainPanel_GenerateBOM
+    partial class MainPanel_GenerateMCE
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,38 +29,26 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 53);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 135);
+            this.label1.MaximumSize = new System.Drawing.Size(698, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(625, 324);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "THIS IS THE GENERATE MCE PANEL";
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
-            // MainPanel_GenerateBOM
+            // MainPanel_GenerateMCE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "MainPanel_GenerateBOM";
-            this.SizeChanged += new System.EventHandler(this.MainPanel_GenerateBOM_SizeChanged);
+            this.Name = "MainPanel_GenerateMCE";
+            this.Size = new System.Drawing.Size(698, 603);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +57,5 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-
     }
 }

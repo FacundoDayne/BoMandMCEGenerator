@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BoMandMCEGenerator
 {
-    public partial class SidePanel : UserControl
+    public partial class MainPanel_GenerateMCE : UserControl
     {
-        public SidePanel()
+        public MainPanel_GenerateMCE()
         {
             InitializeComponent();
         }
