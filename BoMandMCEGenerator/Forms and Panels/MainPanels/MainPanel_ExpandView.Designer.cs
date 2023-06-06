@@ -1,4 +1,6 @@
-﻿namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
+﻿using System.Drawing;
+
+namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
 {
     partial class MainPanel_ExpandView
     {
@@ -37,12 +39,14 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnBack = new RoundButton();
+            this.dataSet = new System.Windows.Forms.DataGridView();
+            this.colMaterialName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPricePerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGenerate = new RoundButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnEditCell = new RoundButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -136,60 +140,80 @@
             this.lblName.TabIndex = 9;
             this.lblName.Text = "lblName";
             // 
-            // dataGridView1
+            // dataSet
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataSet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 198);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(673, 389);
-            this.dataGridView1.TabIndex = 13;
+            this.dataSet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataSet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaterialName,
+            this.colQuantity,
+            this.colPricePerUnit,
+            this.colTotalPrice});
+            this.dataSet.Location = new System.Drawing.Point(12, 198);
+            this.dataSet.Name = "dataSet";
+            this.dataSet.Size = new System.Drawing.Size(673, 389);
+            this.dataSet.TabIndex = 13;
             // 
-            // btnSave
+            // colMaterialName
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(529, 154);
-            this.btnSave.MaximumSize = new System.Drawing.Size(75, 38);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 38);
-            this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.colMaterialName.HeaderText = "Material Name";
+            this.colMaterialName.Name = "colMaterialName";
             // 
-            // btnCancel
+            // colQuantity
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(610, 154);
-            this.btnCancel.MaximumSize = new System.Drawing.Size(75, 38);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 38);
-            this.btnCancel.TabIndex = 15;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.colQuantity.HeaderText = "Quantity";
+            this.colQuantity.Name = "colQuantity";
             // 
-            // btnBack
+            // colPricePerUnit
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.Location = new System.Drawing.Point(529, 7);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(156, 40);
-            this.btnBack.TabIndex = 16;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.colPricePerUnit.HeaderText = "Price Per Unit";
+            this.colPricePerUnit.Name = "colPricePerUnit";
+            this.colPricePerUnit.ReadOnly = true;
+            // 
+            // colTotalPrice
+            // 
+            this.colTotalPrice.HeaderText = "Total Price";
+            this.colTotalPrice.Name = "colTotalPrice";
+            this.colTotalPrice.ReadOnly = true;
             // 
             // btnGenerate
             // 
             this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerate.Location = new System.Drawing.Point(529, 55);
+            this.btnGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnGenerate.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGenerate.FlatAppearance.BorderSize = 3;
+            this.btnGenerate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnGenerate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerate.ForeColor = System.Drawing.Color.White;
+            this.btnGenerate.Location = new System.Drawing.Point(529, 130);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(156, 40);
+            this.btnGenerate.Size = new System.Drawing.Size(156, 54);
             this.btnGenerate.TabIndex = 17;
             this.btnGenerate.Text = "Generate MCE";
-            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.UseVisualStyleBackColor = false;
+            // 
+            // btnEditCell
+            // 
+            this.btnEditCell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnEditCell.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditCell.FlatAppearance.BorderSize = 3;
+            this.btnEditCell.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnEditCell.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnEditCell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditCell.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCell.ForeColor = System.Drawing.Color.White;
+            this.btnEditCell.Location = new System.Drawing.Point(529, 55);
+            this.btnEditCell.Name = "btnEditCell";
+            this.btnEditCell.Size = new System.Drawing.Size(156, 64);
+            this.btnEditCell.TabIndex = 16;
+            this.btnEditCell.Text = "Edit Cell";
+            this.btnEditCell.UseVisualStyleBackColor = false;
             // 
             // MainPanel_ExpandView
             // 
@@ -197,10 +221,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnEditCell);
+            this.Controls.Add(this.dataSet);
             this.Controls.Add(this.lblCost);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblID);
@@ -212,7 +234,7 @@
             this.Controls.Add(this.label3);
             this.Name = "MainPanel_ExpandView";
             this.Size = new System.Drawing.Size(698, 603);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,10 +251,12 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCancel;
-        private RoundButton btnBack;
+        private System.Windows.Forms.DataGridView dataSet;
+        private RoundButton btnEditCell;
         private RoundButton btnGenerate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaterialName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPricePerUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTotalPrice;
     }
 }

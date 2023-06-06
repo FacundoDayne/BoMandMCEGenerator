@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms and Panels\EditCellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\EditCellForm.Designer.cs">
+      <DependentUpon>EditCellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Miscellaneous Classes\BillOfMaterials.cs" />
     <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\MainPanel_Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +102,12 @@
     <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\ViewBOM_Plate.Designer.cs">
       <DependentUpon>ViewBOM_Plate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_LandingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\MainPanels\MainPanel_LandingPanel.Designer.cs">
+      <DependentUpon>MainPanel_LandingPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Miscellaneous Classes\PreviousBOM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,13 +131,15 @@
     <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\TestPicture.Designer.cs">
       <DependentUpon>TestPicture.cs</DependentUpon>
     </Compile>
-    <Compile Include="Miscellaneous Classes\UserData.cs" />
     <Compile Include="Miscellaneous Classes\SampleData.cs" />
     <EmbeddedResource Include="Forms and Panels\LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\EditCellForm.resx">
+      <DependentUpon>EditCellForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_ExpandView.resx">
       <DependentUpon>MainPanel_ExpandView.cs</DependentUpon>
@@ -134,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_GenerateMCE.resx">
       <DependentUpon>MainPanel_GenerateMCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_LandingPanel.resx">
+      <DependentUpon>MainPanel_LandingPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel_ViewBOM.resx">
       <DependentUpon>MainPanel_ViewBOM.cs</DependentUpon>
@@ -178,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loginBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

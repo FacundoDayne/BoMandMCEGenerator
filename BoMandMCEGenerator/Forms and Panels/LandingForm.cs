@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -45,7 +46,7 @@ namespace BoMandMCEGenerator
             int[] size = { _current.Width, _current.Height };
             if (mainPanelName != nextMask.Name.ToString())
             {
-                Console.WriteLine("Main panel changed to: " + nextMask.Name.ToString());
+                Debug.WriteLine("Main panel changed to: " + nextMask.Name.ToString());
                 mainPanelName = nextMask.Name.ToString();
                 this.Controls.Remove(_current);
 //if this code breaks, there might have been an auto generated code that turned _current into a MainPanel_GenerateBOM class

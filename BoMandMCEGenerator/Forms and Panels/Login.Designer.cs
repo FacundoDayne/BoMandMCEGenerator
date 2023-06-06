@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnForget = new System.Windows.Forms.LinkLabel();
             this.roundButton1 = new RoundButton();
             this.btnLogin = new RoundButton();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLogin.BackColor = System.Drawing.Color.White;
-            this.pnlLogin.Controls.Add(this.linkLabel1);
+            this.pnlLogin.Controls.Add(this.btnForget);
             this.pnlLogin.Controls.Add(this.roundButton1);
             this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.txtPassword);
@@ -60,17 +60,17 @@
             this.pnlLogin.Size = new System.Drawing.Size(400, 507);
             this.pnlLogin.TabIndex = 2;
             // 
-            // linkLabel1
+            // btnForget
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(250, 267);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(92, 13);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forgot Password?";
+            this.btnForget.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnForget.AutoSize = true;
+            this.btnForget.LinkColor = System.Drawing.Color.Black;
+            this.btnForget.Location = new System.Drawing.Point(250, 267);
+            this.btnForget.Name = "btnForget";
+            this.btnForget.Size = new System.Drawing.Size(92, 13);
+            this.btnForget.TabIndex = 7;
+            this.btnForget.TabStop = true;
+            this.btnForget.Text = "Forgot Password?";
             // 
             // roundButton1
             // 
@@ -177,6 +177,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private RoundButton btnLogin;
         private RoundButton roundButton1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel btnForget;
     }
 }

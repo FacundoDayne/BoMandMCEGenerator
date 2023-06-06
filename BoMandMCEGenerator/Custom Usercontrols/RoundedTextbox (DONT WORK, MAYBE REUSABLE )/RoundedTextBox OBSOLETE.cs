@@ -11,7 +11,7 @@ using System.Drawing;
 
 namespace BoMandMCEGenerator.RoundedTextbox
 {
-    internal class RoundedTextBoxOBSOLETEDONTUSE : Control
+    internal class RoundedTextBoxOBSOLETEDONTUSE : TextBox
     {
         private int radius = 15;
         public TextBox textbox = new TextBox();
@@ -39,7 +39,7 @@ namespace BoMandMCEGenerator.RoundedTextbox
             textbox.KeyDown += new KeyEventHandler(textbox_KeyDown);
             textbox.TextChanged += new EventHandler(textbox_TextChanged);
             textbox.MouseDoubleClick += new MouseEventHandler(textbox_MouseDoubleClick);
-
+            this.Invalidate();
         }
 
         private void textbox_MouseDoubleClick(object sender, MouseEventArgs e)

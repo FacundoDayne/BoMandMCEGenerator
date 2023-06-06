@@ -41,6 +41,7 @@ namespace BoMandMCEGenerator
             this.btnAccount = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnViewBOM = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.DropDownMenuPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -50,13 +51,17 @@ namespace BoMandMCEGenerator
             // 
             this.btnGenerateBOM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerateBOM.BackColor = System.Drawing.Color.Black;
+            this.btnGenerateBOM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnGenerateBOM.FlatAppearance.BorderSize = 3;
+            this.btnGenerateBOM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnGenerateBOM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnGenerateBOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateBOM.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateBOM.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateBOM.Location = new System.Drawing.Point(-1, 79);
+            this.btnGenerateBOM.Location = new System.Drawing.Point(3, 148);
             this.btnGenerateBOM.Margin = new System.Windows.Forms.Padding(0);
             this.btnGenerateBOM.Name = "btnGenerateBOM";
-            this.btnGenerateBOM.Size = new System.Drawing.Size(296, 48);
+            this.btnGenerateBOM.Size = new System.Drawing.Size(288, 48);
             this.btnGenerateBOM.TabIndex = 2;
             this.btnGenerateBOM.Text = "Generate BOM";
             this.btnGenerateBOM.UseVisualStyleBackColor = false;
@@ -65,13 +70,17 @@ namespace BoMandMCEGenerator
             // 
             this.btnGenerateMCE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerateMCE.BackColor = System.Drawing.Color.Black;
+            this.btnGenerateMCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnGenerateMCE.FlatAppearance.BorderSize = 3;
+            this.btnGenerateMCE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnGenerateMCE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnGenerateMCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateMCE.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGenerateMCE.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateMCE.Location = new System.Drawing.Point(-1, 217);
+            this.btnGenerateMCE.Location = new System.Drawing.Point(3, 286);
             this.btnGenerateMCE.Margin = new System.Windows.Forms.Padding(0);
             this.btnGenerateMCE.Name = "btnGenerateMCE";
-            this.btnGenerateMCE.Size = new System.Drawing.Size(296, 48);
+            this.btnGenerateMCE.Size = new System.Drawing.Size(288, 48);
             this.btnGenerateMCE.TabIndex = 3;
             this.btnGenerateMCE.Text = "Generate MCE";
             this.btnGenerateMCE.UseVisualStyleBackColor = false;
@@ -189,15 +198,38 @@ namespace BoMandMCEGenerator
             // 
             this.btnViewBOM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewBOM.BackColor = System.Drawing.Color.Black;
+            this.btnViewBOM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnViewBOM.FlatAppearance.BorderSize = 3;
+            this.btnViewBOM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnViewBOM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnViewBOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewBOM.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnViewBOM.ForeColor = System.Drawing.Color.White;
-            this.btnViewBOM.Location = new System.Drawing.Point(-1, 148);
+            this.btnViewBOM.Location = new System.Drawing.Point(3, 217);
             this.btnViewBOM.Name = "btnViewBOM";
-            this.btnViewBOM.Size = new System.Drawing.Size(296, 48);
+            this.btnViewBOM.Size = new System.Drawing.Size(288, 48);
             this.btnViewBOM.TabIndex = 10;
             this.btnViewBOM.Text = "View BOMS";
             this.btnViewBOM.UseVisualStyleBackColor = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnHome.FlatAppearance.BorderSize = 3;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(3, 79);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(288, 48);
+            this.btnHome.TabIndex = 11;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // SidePanel
             // 
@@ -209,6 +241,7 @@ namespace BoMandMCEGenerator
             this.Controls.Add(this.DropDownMenuPanel);
             this.Controls.Add(this.btnGenerateMCE);
             this.Controls.Add(this.btnGenerateBOM);
+            this.Controls.Add(this.btnHome);
             this.Name = "SidePanel";
             this.Size = new System.Drawing.Size(294, 592);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -238,5 +271,6 @@ namespace BoMandMCEGenerator
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private SidePanel sidePanel;
         private Button btnViewBOM;
+        private Button btnHome;
     }
 }

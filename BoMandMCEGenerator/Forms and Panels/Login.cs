@@ -1,7 +1,9 @@
-﻿using System;
+﻿using BoMandMCEGenerator.Miscellaneous_Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,23 @@ namespace BoMandMCEGenerator
             System.Windows.Forms.ControlStyles.UserPaint |
             System.Windows.Forms.ControlStyles.AllPaintingInWmPaint |
             System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer,true);
+            this.txtUsername.KeyPress += keyPress;
+            this.txtPassword.KeyPress += keyPress;
+            this.VisibleChanged += Login_Load;
+            this.btnForget.Click += forgetPassword;
+        }
+
+        private void forgetPassword(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Forgot Password");
+        }
+
+        private void keyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
         }
 
         private void Login_Paint(object sender, PaintEventArgs e)
@@ -60,12 +79,14 @@ namespace BoMandMCEGenerator
         private void Login_Load(object sender, EventArgs e)
         {
             CenterPanel();
+            txtUsername.Select();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             LandingForm.landingForm.username = txtUsername.Text.ToString();
             LandingForm.landingForm.changeText();
+            LandingForm.landingForm.maskChange(new MainPanel_LandingPanel());
             this.Hide();
         }
     }

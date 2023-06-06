@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using BoMandMCEGenerator.Miscellaneous_Classes;
+using System.Windows.Forms;
 
 namespace BoMandMCEGenerator
 {
@@ -32,7 +33,7 @@ namespace BoMandMCEGenerator
         {
             this.login1 = new BoMandMCEGenerator.Login();
             this.sidePanel1 = new BoMandMCEGenerator.SidePanel();
-            this._current = new BoMandMCEGenerator.MainPanel_GenerateBOM();
+            this._current = new MainPanel_LandingPanel();
             this.SuspendLayout();
             // 
             // login1

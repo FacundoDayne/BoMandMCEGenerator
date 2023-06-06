@@ -1,4 +1,5 @@
 ﻿using BoMandMCEGenerator.MainPanels;
+using BoMandMCEGenerator.Miscellaneous_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,7 @@ namespace BoMandMCEGenerator
             btnGenerateBOM.Click += requestChange;
             btnGenerateMCE.Click += requestChange;
             btnViewBOM.Click += requestChange;
+            btnHome.Click += requestChange;
         }
 
         private void btnDropdown_Click(object sender, EventArgs e)
@@ -58,8 +60,10 @@ namespace BoMandMCEGenerator
                 case "btnViewBOM":
                     LandingForm.landingForm.maskChange(new MainPanel_ViewBOM());
                     break;
+                case "btnHome":
+                    LandingForm.landingForm.maskChange(new MainPanel_LandingPanel());
+                    break;
             }
         }
-
     }
 }

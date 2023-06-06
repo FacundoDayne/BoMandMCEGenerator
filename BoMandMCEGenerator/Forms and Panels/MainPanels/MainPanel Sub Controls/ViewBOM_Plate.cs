@@ -35,9 +35,9 @@ namespace BoMandMCEGenerator.MainPanels
             slotted = previousBOM;
 
         }
-        private void mouseDown(object sender, MouseEventArgs e) {   if (e.Button == MouseButtons.Left) {   this.BackColor = Color.FromArgb(183, 176, 180); }   }
-        private void mouseEnter(object sender, EventArgs e) {   this.BackColor = Color.FromArgb(136, 122, 131); tableLayoutPanel1.MouseEnter -= mouseEnter; }
-        private void mouseExit(object sender, EventArgs e)  {   this.BackColor = Color.FromArgb(152, 136, 146); tableLayoutPanel1.MouseEnter += mouseEnter; }
+        private void mouseDown(object sender, MouseEventArgs e) {   if (e.Button == MouseButtons.Left) {   this.BackColor = Color.FromArgb(183, 176, 180); tableLayoutPanel1.BackColor = this.BackColor; }   }
+        private void mouseEnter(object sender, EventArgs e) {   this.BackColor = Color.FromArgb(136, 122, 131); tableLayoutPanel1.MouseEnter -= mouseEnter; tableLayoutPanel1.BackColor = this.BackColor;  }
+        private void mouseExit(object sender, EventArgs e)  {   this.BackColor = Color.FromArgb(152, 136, 146); tableLayoutPanel1.MouseEnter += mouseEnter; tableLayoutPanel1.BackColor = this.BackColor; }
         private void expandView(object sender, MouseEventArgs e)    {   if (e.Button == MouseButtons.Left)  {   LandingForm.landingForm.maskChange(new MainPanel_ExpandView(slotted));  }   }
     }
 }
