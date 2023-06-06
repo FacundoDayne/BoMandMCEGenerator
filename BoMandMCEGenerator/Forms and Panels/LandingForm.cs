@@ -1,4 +1,5 @@
 ﻿using BoMandMCEGenerator.Custom_Usercontrols;
+using BoMandMCEGenerator.Miscellaneous_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +32,7 @@ namespace BoMandMCEGenerator
 
         public void changeText()
         {
-            sidePanel1.lblUsername.Text = username;
+            //sidePanel1.lblUsername.Text = username;
         }
 
         public void showLogin()
@@ -44,6 +45,7 @@ namespace BoMandMCEGenerator
         public void maskChange (UserControl nextMask)
         {
             int[] size = { _current.Width, _current.Height };
+            Point location = _current.Location;
             if (mainPanelName != nextMask.Name.ToString())
             {
                 Debug.WriteLine("Main panel changed to: " + nextMask.Name.ToString());
@@ -51,7 +53,7 @@ namespace BoMandMCEGenerator
                 this.Controls.Remove(_current);
 //if this code breaks, there might have been an auto generated code that turned _current into a MainPanel_GenerateBOM class
 //change it in the Designer class to fix
-                _current = new MainPanel_Panel(size, nextMask).newPanel;
+                _current = new MainPanel_Panel(size, location, nextMask).newPanel;
                 this.Controls.Add(_current);
             }
         }

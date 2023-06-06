@@ -43,11 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms and Panels\DescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\DescriptionForm.Designer.cs">
+      <DependentUpon>DescriptionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms and Panels\EditCellForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms and Panels\EditCellForm.Designer.cs">
       <DependentUpon>EditCellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms and Panels\TopPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms and Panels\TopPanel.Designer.cs">
+      <DependentUpon>TopPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Miscellaneous Classes\BillOfMaterials.cs" />
     <Compile Include="Forms and Panels\MainPanels\MainPanel Sub Controls\MainPanel_Panel.cs">
@@ -132,6 +144,9 @@
       <DependentUpon>TestPicture.cs</DependentUpon>
     </Compile>
     <Compile Include="Miscellaneous Classes\SampleData.cs" />
+    <EmbeddedResource Include="Forms and Panels\DescriptionForm.resx">
+      <DependentUpon>DescriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms and Panels\MainPanels\MainPanel Sub Controls\ViewBOM_Plate.resx">
       <DependentUpon>ViewBOM_Plate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms and Panels\TopPanel.resx">
+      <DependentUpon>TopPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

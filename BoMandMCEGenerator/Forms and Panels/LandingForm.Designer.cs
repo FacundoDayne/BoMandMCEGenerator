@@ -31,10 +31,25 @@ namespace BoMandMCEGenerator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingForm));
+            this._current = new BoMandMCEGenerator.Miscellaneous_Classes.MainPanel_LandingPanel();
             this.login1 = new BoMandMCEGenerator.Login();
             this.sidePanel1 = new BoMandMCEGenerator.SidePanel();
-            this._current = new MainPanel_LandingPanel();
             this.SuspendLayout();
+            // 
+            // _current
+            // 
+            this._current.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._current.BackColor = System.Drawing.Color.White;
+            this._current.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_current.BackgroundImage")));
+            this._current.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this._current.Location = new System.Drawing.Point(-2, 0);
+            this._current.Margin = new System.Windows.Forms.Padding(0);
+            this._current.Name = "_current";
+            this._current.Size = new System.Drawing.Size(702, 603);
+            this._current.TabIndex = 4;
             // 
             // login1
             // 
@@ -53,20 +68,10 @@ namespace BoMandMCEGenerator
             this.sidePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.sidePanel1.Location = new System.Drawing.Point(700, 0);
+            this.sidePanel1.Margin = new System.Windows.Forms.Padding(0);
             this.sidePanel1.Name = "sidePanel1";
             this.sidePanel1.Size = new System.Drawing.Size(294, 603);
-            this.sidePanel1.TabIndex = 3;
-            // 
-            // _current
-            // 
-            this._current.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._current.BackColor = System.Drawing.Color.White;
-            this._current.Location = new System.Drawing.Point(2, 0);
-            this._current.Name = "_current";
-            this._current.Size = new System.Drawing.Size(698, 603);
-            this._current.TabIndex = 4;
+            this.sidePanel1.TabIndex = 5;
             // 
             // LandingForm
             // 
@@ -84,9 +89,9 @@ namespace BoMandMCEGenerator
         }
 
         #endregion
-        private SidePanel sidePanel1;
         public Login login1;
         private UserControl _current;
+        private SidePanel sidePanel1;
     }
 }
 

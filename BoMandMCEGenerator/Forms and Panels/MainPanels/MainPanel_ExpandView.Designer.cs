@@ -46,6 +46,7 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             this.colTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGenerate = new RoundButton();
             this.btnEditCell = new RoundButton();
+            this.btnDescription = new RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,7 +189,7 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             this.btnGenerate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
             this.btnGenerate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerate.ForeColor = System.Drawing.Color.White;
             this.btnGenerate.Location = new System.Drawing.Point(529, 130);
             this.btnGenerate.Name = "btnGenerate";
@@ -208,18 +209,37 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             this.btnEditCell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCell.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCell.ForeColor = System.Drawing.Color.White;
-            this.btnEditCell.Location = new System.Drawing.Point(529, 55);
+            this.btnEditCell.Location = new System.Drawing.Point(529, 72);
             this.btnEditCell.Name = "btnEditCell";
-            this.btnEditCell.Size = new System.Drawing.Size(156, 64);
+            this.btnEditCell.Size = new System.Drawing.Size(156, 54);
             this.btnEditCell.TabIndex = 16;
             this.btnEditCell.Text = "Edit Cell";
             this.btnEditCell.UseVisualStyleBackColor = false;
+            // 
+            // btnDescription
+            // 
+            this.btnDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnDescription.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDescription.FlatAppearance.BorderSize = 3;
+            this.btnDescription.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnDescription.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescription.ForeColor = System.Drawing.Color.White;
+            this.btnDescription.Location = new System.Drawing.Point(529, 12);
+            this.btnDescription.Name = "btnDescription";
+            this.btnDescription.Size = new System.Drawing.Size(156, 54);
+            this.btnDescription.TabIndex = 18;
+            this.btnDescription.Text = "Button";
+            this.btnDescription.UseVisualStyleBackColor = false;
             // 
             // MainPanel_ExpandView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnDescription);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.btnEditCell);
             this.Controls.Add(this.dataSet);
@@ -258,5 +278,6 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPricePerUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotalPrice;
+        private RoundButton btnDescription;
     }
 }

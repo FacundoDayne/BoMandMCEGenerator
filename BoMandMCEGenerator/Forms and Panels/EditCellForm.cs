@@ -26,7 +26,7 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             if (sender.Equals(btnSave))
             {
                 try{
-                    int quantity = Convert.ToInt16(txtQuantity.Text.ToString());
+                    int quantity = (int)Convert.ToInt64(txtQuantity.Text.ToString());
                     string[] newData = { cbMaterialName.Text.ToString(), quantity.ToString(), lblPrice.Text.ToString() };
                     MainPanel_ExpandView.expandViewInstance.newData = newData;
                     this.DialogResult = DialogResult.OK; 

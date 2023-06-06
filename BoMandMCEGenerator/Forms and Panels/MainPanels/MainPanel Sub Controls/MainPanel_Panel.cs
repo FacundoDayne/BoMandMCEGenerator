@@ -12,7 +12,7 @@ namespace BoMandMCEGenerator.Custom_Usercontrols
     public partial class MainPanel_Panel : UserControl
     {
         public UserControl newPanel;
-        public MainPanel_Panel(int[] size, UserControl userControl)
+        public MainPanel_Panel(int[] size, Point location, UserControl userControl)
         {            
             InitializeComponent();
             newPanel = userControl;
@@ -20,7 +20,7 @@ namespace BoMandMCEGenerator.Custom_Usercontrols
                 | System.Windows.Forms.AnchorStyles.Left)
                 | System.Windows.Forms.AnchorStyles.Right)));
             newPanel.BackColor = System.Drawing.Color.White;
-            newPanel.Location = new System.Drawing.Point(2, 0);
+            newPanel.Location = location;
             newPanel.Name = "_current";
             newPanel.Size = new System.Drawing.Size(size[0], size[1]);
         }
@@ -29,13 +29,13 @@ namespace BoMandMCEGenerator.Custom_Usercontrols
             InitializeComponent();
         }
 
-        public UserControl Conform_MainPanel(int[] size, UserControl userControl)
+        public UserControl Conform_MainPanel(int[] size, Point location, UserControl userControl)
         {
             userControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
                 | System.Windows.Forms.AnchorStyles.Right)));
             userControl.BackColor = System.Drawing.Color.White;
-            userControl.Location = new System.Drawing.Point(2, 0);
+            userControl.Location = location;
             userControl.Name = "_current";
             userControl.Size = new System.Drawing.Size(size[0], size[1]);
             return userControl;

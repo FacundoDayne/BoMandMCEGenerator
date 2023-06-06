@@ -28,8 +28,16 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             lblName.Text = slotted.getProject().ToString();
             this.billOfMaterials = slotted.getBillOfMaterials();
             this.Load += populateDataSet;
+            this.btnDescription.Click += describeCell;
             this.btnEditCell.Click += editCell;
             expandViewInstance = this;
+        }
+
+        private void describeCell(object sender, EventArgs e)
+        {
+            DescriptionForm descriptionForm = new DescriptionForm(dataSet.CurrentCell.Value.ToString());
+            descriptionForm.ShowDialog();
+            descriptionForm.Dispose();
         }
 
         private void editCell(object sender, EventArgs e)
@@ -43,8 +51,8 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
                 dataSet[0, rowIndex].Value = newData[0];
                 dataSet[1, rowIndex].Value = newData[1];
                 dataSet[2, rowIndex].Value = newData[2];
-                float total = Convert.ToInt64(dataSet[1, rowIndex].Value.ToString()) * Convert.ToInt64(dataSet[2, rowIndex].Value.ToString());
-                dataSet[3, rowIndex].Value = total;
+                float total = Convert.ToInt64(dataSet[1, rowIndex].Value.ToString()) * float.Parse(dataSet[2, rowIndex].Value.ToString());
+                dataSet[3, rowIndex].Value = total.ToString("F2");
             }
             editCellForm.Dispose();
         }
@@ -56,11 +64,11 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
                 dataSet.Rows.Add();
                 dataSet[0, i].Value = slotted.getBillOfMaterials().getName()[i];
                 dataSet[1, i].Value = slotted.getBillOfMaterials().getQuantity()[i];
-                dataSet[2, i].Value = slotted.getBillOfMaterials().getPrice()[i];
+                dataSet[2, i].Value = slotted.getBillOfMaterials().getPrice()[i].ToString("F2");
                 int quantity = (int)dataSet[1, i].Value;
-                float price = (float)dataSet[2, i].Value;
+                float price = float.Parse(dataSet[2,i].Value.ToString());
                 float total = quantity * price;
-                dataSet[3, i].Value = total;
+                dataSet[3, i].Value = total.ToString("F2");
             }
         }
 
