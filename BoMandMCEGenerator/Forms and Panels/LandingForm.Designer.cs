@@ -31,7 +31,6 @@ namespace BoMandMCEGenerator
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingForm));
             this._current = new BoMandMCEGenerator.Miscellaneous_Classes.MainPanel_LandingPanel();
             this.login1 = new BoMandMCEGenerator.Login();
             this.sidePanel1 = new BoMandMCEGenerator.SidePanel();
@@ -42,14 +41,14 @@ namespace BoMandMCEGenerator
             this._current.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this._current.BackColor = System.Drawing.Color.White;
-            this._current.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_current.BackgroundImage")));
+            this._current.BackColor = System.Drawing.SystemColors.Control;
             this._current.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this._current.Location = new System.Drawing.Point(-2, 0);
             this._current.Margin = new System.Windows.Forms.Padding(0);
             this._current.Name = "_current";
             this._current.Size = new System.Drawing.Size(702, 603);
             this._current.TabIndex = 4;
+            this._current.Load += new System.EventHandler(this._current_Load);
             // 
             // login1
             // 
@@ -57,9 +56,9 @@ namespace BoMandMCEGenerator
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.login1.Location = new System.Drawing.Point(2, 0);
+            this.login1.Location = new System.Drawing.Point(0, 0);
             this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(992, 603);
+            this.login1.Size = new System.Drawing.Size(1000, 610);
             this.login1.TabIndex = 4;
             this.login1.Visible = false;
             // 
@@ -90,8 +89,8 @@ namespace BoMandMCEGenerator
 
         #endregion
         public Login login1;
-        private UserControl _current;
         private SidePanel sidePanel1;
+        private UserControl _current;
     }
 }
 

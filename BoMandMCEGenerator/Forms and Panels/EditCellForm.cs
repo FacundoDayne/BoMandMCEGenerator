@@ -14,9 +14,10 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
         public EditCellForm(string[] sentData)
         {
             InitializeComponent();
-            this.cbMaterialName.Text = sentData[0];
-            this.txtQuantity.Text = sentData[1];
-            this.lblPrice.Text = sentData[2];
+            this.lblMaterialID.Text = sentData[0];
+            this.cbMaterialName.Text = sentData[1];
+            this.txtQuantity.Text = sentData[2];
+            this.lblPrice.Text = sentData[3];
             this.btnSave.Click += returnData;
             this.btnCancel.Click += returnData;
         }
@@ -27,7 +28,7 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             {
                 try{
                     int quantity = (int)Convert.ToInt64(txtQuantity.Text.ToString());
-                    string[] newData = { cbMaterialName.Text.ToString(), quantity.ToString(), lblPrice.Text.ToString() };
+                    string[] newData = { lblMaterialID.Text.ToString(), cbMaterialName.Text.ToString(), quantity.ToString(), lblPrice.Text.ToString() };
                     MainPanel_ExpandView.expandViewInstance.newData = newData;
                     this.DialogResult = DialogResult.OK; 
                     this.Close();

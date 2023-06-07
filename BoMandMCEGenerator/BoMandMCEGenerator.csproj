@@ -55,6 +55,18 @@
     <Compile Include="Forms and Panels\EditCellForm.Designer.cs">
       <DependentUpon>EditCellForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom Usercontrols\generateLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Usercontrols\generateLabel.Designer.cs">
+      <DependentUpon>generateLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Usercontrols\generateTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Usercontrols\generateTextBox.Designer.cs">
+      <DependentUpon>generateTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms and Panels\TopPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +229,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\engineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_crane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

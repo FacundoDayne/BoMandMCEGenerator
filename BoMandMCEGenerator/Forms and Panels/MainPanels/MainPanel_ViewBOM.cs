@@ -140,7 +140,7 @@ namespace BoMandMCEGenerator.MainPanels
                     for (int j = 1; j < tableLayoutPanel1.ColumnCount + 1; j++)
                     {
                         try { 
-                            //Places a placeholder in the cells that are empty
+                            //Places a control in the cells that are empty
                             tableLayoutPanel1.Controls.Add(new ViewBOM_Plate(previousBOM.Pop()));
                             cells++;
                         }

@@ -15,6 +15,13 @@ namespace BoMandMCEGenerator.Forms_and_Panels
         {
             InitializeComponent();
             this.Text = name + " Description";
+            this.btnReturn.Click += returns;
         }
+
+        private void returns(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
     }
 }

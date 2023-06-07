@@ -40,13 +40,14 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             this.lblID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.dataSet = new System.Windows.Forms.DataGridView();
+            this.btnDescription = new RoundButton();
+            this.btnGenerate = new RoundButton();
+            this.btnEditCell = new RoundButton();
+            this.colMaterialID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaterialName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPricePerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnGenerate = new RoundButton();
-            this.btnEditCell = new RoundButton();
-            this.btnDescription = new RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,6 +150,7 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             this.dataSet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataSet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataSet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaterialID,
             this.colMaterialName,
             this.colQuantity,
             this.colPricePerUnit,
@@ -158,27 +160,23 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             this.dataSet.Size = new System.Drawing.Size(673, 389);
             this.dataSet.TabIndex = 13;
             // 
-            // colMaterialName
+            // btnDescription
             // 
-            this.colMaterialName.HeaderText = "Material Name";
-            this.colMaterialName.Name = "colMaterialName";
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.HeaderText = "Quantity";
-            this.colQuantity.Name = "colQuantity";
-            // 
-            // colPricePerUnit
-            // 
-            this.colPricePerUnit.HeaderText = "Price Per Unit";
-            this.colPricePerUnit.Name = "colPricePerUnit";
-            this.colPricePerUnit.ReadOnly = true;
-            // 
-            // colTotalPrice
-            // 
-            this.colTotalPrice.HeaderText = "Total Price";
-            this.colTotalPrice.Name = "colTotalPrice";
-            this.colTotalPrice.ReadOnly = true;
+            this.btnDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.btnDescription.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDescription.FlatAppearance.BorderSize = 3;
+            this.btnDescription.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
+            this.btnDescription.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
+            this.btnDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescription.ForeColor = System.Drawing.Color.White;
+            this.btnDescription.Location = new System.Drawing.Point(529, 12);
+            this.btnDescription.Name = "btnDescription";
+            this.btnDescription.Size = new System.Drawing.Size(156, 54);
+            this.btnDescription.TabIndex = 18;
+            this.btnDescription.Text = "Button";
+            this.btnDescription.UseVisualStyleBackColor = false;
             // 
             // btnGenerate
             // 
@@ -216,23 +214,35 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
             this.btnEditCell.Text = "Edit Cell";
             this.btnEditCell.UseVisualStyleBackColor = false;
             // 
-            // btnDescription
+            // colMaterialID
             // 
-            this.btnDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.btnDescription.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDescription.FlatAppearance.BorderSize = 3;
-            this.btnDescription.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(136)))), ((int)(((byte)(146)))));
-            this.btnDescription.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(38)))), ((int)(((byte)(52)))));
-            this.btnDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescription.ForeColor = System.Drawing.Color.White;
-            this.btnDescription.Location = new System.Drawing.Point(529, 12);
-            this.btnDescription.Name = "btnDescription";
-            this.btnDescription.Size = new System.Drawing.Size(156, 54);
-            this.btnDescription.TabIndex = 18;
-            this.btnDescription.Text = "Button";
-            this.btnDescription.UseVisualStyleBackColor = false;
+            this.colMaterialID.HeaderText = "Material ID";
+            this.colMaterialID.Name = "colMaterialID";
+            this.colMaterialID.ReadOnly = true;
+            // 
+            // colMaterialName
+            // 
+            this.colMaterialName.HeaderText = "Material Name";
+            this.colMaterialName.Name = "colMaterialName";
+            this.colMaterialName.ReadOnly = true;
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.HeaderText = "Quantity";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.ReadOnly = true;
+            // 
+            // colPricePerUnit
+            // 
+            this.colPricePerUnit.HeaderText = "Price Per Unit";
+            this.colPricePerUnit.Name = "colPricePerUnit";
+            this.colPricePerUnit.ReadOnly = true;
+            // 
+            // colTotalPrice
+            // 
+            this.colTotalPrice.HeaderText = "Total Price";
+            this.colTotalPrice.Name = "colTotalPrice";
+            this.colTotalPrice.ReadOnly = true;
             // 
             // MainPanel_ExpandView
             // 
@@ -274,10 +284,11 @@ namespace BoMandMCEGenerator.Forms_and_Panels.MainPanels
         private System.Windows.Forms.DataGridView dataSet;
         private RoundButton btnEditCell;
         private RoundButton btnGenerate;
+        private RoundButton btnDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaterialID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaterialName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPricePerUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotalPrice;
-        private RoundButton btnDescription;
     }
 }

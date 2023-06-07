@@ -19,7 +19,6 @@ namespace BoMandMCEGenerator.Custom_Usercontrols
             newPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
                 | System.Windows.Forms.AnchorStyles.Right)));
-            newPanel.BackColor = System.Drawing.Color.White;
             newPanel.Location = location;
             newPanel.Name = "_current";
             newPanel.Size = new System.Drawing.Size(size[0], size[1]);

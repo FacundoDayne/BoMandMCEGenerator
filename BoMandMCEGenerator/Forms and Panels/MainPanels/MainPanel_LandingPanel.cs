@@ -21,12 +21,11 @@ namespace BoMandMCEGenerator.Miscellaneous_Classes
             this.Load += startTimer;
             typeof(UserControl).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null,this, new object[] { true });
             timer1.Interval = 20; timer2.Interval = 40;
-            pictureBox1.BackColor = Color.Transparent;
         }
 
         private void startTimer(object sender, EventArgs e)
         {
-            timer1.Start();
+            //timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -40,11 +39,11 @@ namespace BoMandMCEGenerator.Miscellaneous_Classes
             }
             if (goForth)
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 1);
+                //pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 1);
             }
             else
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 1);
+                //pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 1);
             }
         }
 
@@ -60,17 +59,13 @@ namespace BoMandMCEGenerator.Miscellaneous_Classes
             }
             if (goForth)
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 1);
+                //pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 1);
             }
             else
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 1);
+                //pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 1);
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

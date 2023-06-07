@@ -26,11 +26,4 @@ public class RoundButton : Button
         base.OnPaint(e);
     }
 
-    protected void OnFontChanged(EventArgs e)
-    {
-        base.OnFontChanged(e);
-        this.Font = this.Font;
-        base.Invalidate();
-    }
-
 }

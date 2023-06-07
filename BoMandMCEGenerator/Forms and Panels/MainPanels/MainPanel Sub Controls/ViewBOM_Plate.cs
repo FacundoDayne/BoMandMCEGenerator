@@ -32,6 +32,13 @@ namespace BoMandMCEGenerator.MainPanels
             label2.MouseEnter += mouseEnter; label2.MouseLeave += mouseExit;
             label3.MouseEnter += mouseEnter; label3.MouseLeave += mouseExit;
             label4.MouseEnter += mouseEnter; label4.MouseLeave += mouseExit;
+            label1.MouseClick += expandView; label1.MouseClick += expandView;
+            label2.MouseClick += expandView; label2.MouseClick += expandView;
+            label3.MouseClick += expandView; label3.MouseClick += expandView;
+            label4.MouseClick += expandView; label4.MouseClick += expandView;
+            lblDate.MouseClick += expandView; lblID.MouseClick += expandView;
+            lblProject.MouseClick += expandView; lblTotal.MouseClick += expandView;
+
             slotted = previousBOM;
 
         }

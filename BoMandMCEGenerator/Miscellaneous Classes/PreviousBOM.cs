@@ -27,6 +27,12 @@ namespace BoMandMCEGenerator
         public int getID() { return ID; }
         public float getTotal() { return Total; }
         public string getProject() { return Project; }
-        public BillOfMaterials getBillOfMaterials() {  return BillOfMaterials; }
+        public BillOfMaterials getBillOfMaterials() { return BillOfMaterials; }
+        public void setDate(DateTime Date) { this.Date = Date; }
+        public void setID(int ID) { this.ID = ID; }
+        public void setTotal(float Total){ this.Total = Total; }
+        public void setProject(string Project) { this.Project = Project; }
+        public void setBillOfMaterials(BillOfMaterials BillOfMaterials) { this.BillOfMaterials = BillOfMaterials; }
+
     }
 }

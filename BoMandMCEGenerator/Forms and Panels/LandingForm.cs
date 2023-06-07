@@ -57,5 +57,10 @@ namespace BoMandMCEGenerator
                 this.Controls.Add(_current);
             }
         }
+
+        private void _current_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
