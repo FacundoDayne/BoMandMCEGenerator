@@ -4,15 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace BoMandMCEGenerator
 {
     public partial class MainPanel_GenerateMCE : UserControl
-    {
+    { 
         PreviousBOM slotted;
         BillOfMaterials billOfMaterials;
         public MainPanel_GenerateMCE(PreviousBOM slotted)
@@ -24,30 +27,26 @@ namespace BoMandMCEGenerator
             lblID.Text = slotted.getID().ToString();
             lblName.Text = slotted.getProject().ToString();
             this.billOfMaterials = slotted.getBillOfMaterials();
-            this.Load += populateDataSet;
+            populateDataSet();
             this.SetStyle(
             ControlStyles.UserPaint |
             ControlStyles.AllPaintingInWmPaint |
             ControlStyles.OptimizedDoubleBuffer,
             true);
         }
-
-
-
-        private void populateDataSet(object sender, EventArgs e)
+        private void populateDataSet()
         {
+            tableLayoutPanel1.SuspendLayout();
             for (int i = 0; i < slotted.getBillOfMaterials().getName().Count; i++)
-            {
+            {                
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33));
-            }
-            for (int i = 0; i < slotted.getBillOfMaterials().getName().Count; i++)
-            {
                 tableLayoutPanel1.Controls.Add(new generateLabel(billOfMaterials.getName()[i].ToString()));
                 tableLayoutPanel1.Controls.Add(new generateLabel(billOfMaterials.getQuantity()[i].ToString()));
                 tableLayoutPanel1.Controls.Add(new generateLabel(billOfMaterials.getPrice()[i].ToString()));
                 tableLayoutPanel1.Controls.Add(new generateTextBox("txtMarkup#" + i));
                 tableLayoutPanel1.Controls.Add(new generateLabel(billOfMaterials.getQuantity()[i] * billOfMaterials.getPrice()[i]));
-            }            
+            }    
+            tableLayoutPanel1.ResumeLayout();
         }
     }
 }

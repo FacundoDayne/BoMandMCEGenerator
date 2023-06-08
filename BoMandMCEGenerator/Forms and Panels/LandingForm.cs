@@ -30,6 +30,7 @@ namespace BoMandMCEGenerator
             Stack<PreviousBOM> a = new SampleData(20).previousBOMs;
         }
 
+
         public void changeText()
         {
             //sidePanel1.lblUsername.Text = username;
